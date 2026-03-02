@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 8 USO DE STYLE</title>
+</head>
+<body>
+    <p>uno</p>
+    <p>dos</p>
+    <p>tres</p>
+    <p>cuatro</p>
+    <script>
+        const elementos=document.querySelectorAll('p')
+        elementos.forEach((elementos) =>{
+            if(elementos.textContent==='uno'){
+                elementos.style.fontSize='30px'
+            }
+            if(elementos.textContent==='tres'){
+                elementos.style.color='red'
+            }
+            if(elementos.textContent==='cuatro'){
+                elementos.style.backgroundColor='blue'
+            }
+        })
+    </script>
+</body>
+</html>
