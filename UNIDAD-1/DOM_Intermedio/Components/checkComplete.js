@@ -16,7 +16,7 @@ const checkComplete = ()=>{
             element.style.color ='red';
 
         }else{
-            element.style.color='none';
+            element.style.color='';
         }
         
 

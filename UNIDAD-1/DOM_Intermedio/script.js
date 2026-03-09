@@ -22,7 +22,7 @@ import deleteIcon from "./Components/delete.js";
         task.appendChild(contTaks);
         task.appendChild(deleteIcon());
         list.appendChild(task);
-        
+    //   
     }
     //llamar a crear task
     btn.addEventListener('click', createTask);
