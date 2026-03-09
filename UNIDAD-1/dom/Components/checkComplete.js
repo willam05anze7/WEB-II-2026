@@ -12,6 +12,14 @@ const checkComplete = ()=>{
         element.classList.add('fas');
         element.classList.add('completeIcon');
         element.classList.remove('far');
+        if (element.classList.contains('fas')){
+            element.style.color ='red';
+
+        }else{
+            element.style.color='none';
+        }
+        
+
     }
 
 export default checkComplete;

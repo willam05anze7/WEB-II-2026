@@ -26,6 +26,7 @@ import deleteIcon from "./Components/delete.js";
     }
     //llamar a crear task
     btn.addEventListener('click', createTask);
+
     /*
     const checkComplete = ()=>{
         const i = document.createElement('i');
