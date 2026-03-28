@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo-loco {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ff4757;
+    text-shadow: 5px 5px 0px #ffa502;
+    transform: rotate(2deg);
+    animation: temblor 0.5s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes temblor {
+    0%, 100% { transform: rotate(2deg); }
+    50% { transform: rotate(-1deg); }
+}
+
+.subtitulo-absurdo {
+    text-align: center;
+    color: #2c3e50;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.zona-caos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+

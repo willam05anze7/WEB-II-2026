@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> El Formulario Más Incómodo del Universo </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenedor-caos">
+        <h1 class="titulo-loco">FORMULARIO DE TORTURA </h1>
+        <p class="subtitulo-absurdo">(intenta llenarlo... si puedes)</p>
+        
+        <div class="zona-caos" id="zonaCaos">
+            <div class="campo-maldito" id="campoNombre">
+                <div class="distractor"> PREMIUM! </div>
+                <button type="button" class="boton-engañoso" onclick="revelarCampo('nombre')">CLICK AQUÍ PARA TU PREMIO </button>
+                <div class="campo-oculto" id="nombreOculto">
+                    <label class="etiqueta-chiflada"> ¿Tu identidad secreta? ⬅</label>
+                    <input type="text" id="nombre" class="input-loco" placeholder="Escribe tu nombre... o no">
+                </div>
+            </div>
+
+            <div class="campo-maldito">
+                <label class="etiqueta-chiflada">SELECCIONA TU CURSO (arrastra el xd) </label>
+                <input type="range" id="cursoSlider" min="1" max="100" value="1" step="1" class="slider-chiflado">
+                <div class="valor-curso" id="valorCurso">Curso: ???</div>
+                <select id="curso" class="select-loco" style="display: none;">
+                    <option value="">Selecciona...</option>
+                    <option value="1° Básico">1° Básico</option>
+                    <option value="2° Básico">2° Básico</option>
+                    <option value="3° Básico">3° Básico</option>
+                    <option value="4° Básico">4° Básico</option>
+                    <option value="5° Básico">5° Básico</option>
+                    <option value="6° Básico">6° Básico</option>
+                    <option value="7° Básico">7° Básico</option>
+                    <option value="8° Básico">8° Básico</option>
+                    <option value="1° Medio">1° Medio</option>
+                    <option value="2° Medio">2° Medio</option>
+                    <option value="3° Medio">3° Medio</option>
+                    <option value="4° Medio">4° Medio</option>
+                    <option value="Universidad">Universidad</option>
+                </select>
+            </div>
+            <div class="campo-maldito">
+                <label class="etiqueta-chiflada">¿CUÁNTOS AÑOS SUFRES?</label>
+                <div class="contenedor-edad-loca">
+                    <input type="number" id="edad" class="input-loco" placeholder="???" min="0" max="150">
+                    <div class="ruleta-edad" id="ruletaEdad"> GIRA LA RULETA </div>
+                </div>
+                <div class="pista-confusa">(si pones negativo, explota el universo)</div>
+            </div>
+
+            <div class="campo-maldito">
+                <label class="etiqueta-chiflada"> ¿ALIADOS EN CASA? (hermanos) </label>
+                <div class="botones-confusos">
+                    <button type="button" class="btn-confuso" onclick="cambiarHermanos(-1)">MENOS UNO</button>
+                    <span id="hermanosDisplay" class="display-hermanos">0</span>
+                    <button type="button" class="btn-confuso" onclick="cambiarHermanos(1)">MS UNO </button>
+                </div>
+                <input type="number" id="hermanos" class="input-oculto-numero" value="0">
+                <div class="pista-confusa">(no presiones demasiado o se rompe la realidad)</div>
+            </div>
+
+            <div class="campo-maldito">
+                <label class="etiqueta-chiflada"> ¿DÓNDE APARECISTE? (ciudad) </label>
+                <div class="puzzle-ciudad">
+                    <button type="button" class="btn-puzzle" onclick="mostrarOpcionesCiudad()"> DESCIFRA EL ACERTIJO </button>
+                    <div id="ciudadOpciones" class="opciones-ciudad" style="display: none;">
+                        <button type="button" class="opcion-ciudad" onclick="seleccionarCiudad('Santiago')"> La capital oculta</button>
+                        <button type="button" class="opcion-ciudad" onclick="seleccionarCiudad('Valparaíso')"> Ciudad de los cerros</button>
+                        <button type="button" class="opcion-ciudad" onclick="seleccionarCiudad('Concepción')"> Lluvia eterna</button>
+                        <button type="button" class="opcion-ciudad" onclick="seleccionarCiudad('Antofagasta')"> Desierto misterioso</button>
+                        <button type="button" class="opcion-ciudad" onclick="seleccionarCiudad('Otra')"> Otra (escribe abajo)</button>
+                    </div>
+                </div>
+                <input type="text" id="ciudad" class="input-loco" placeholder="o escríbelo aquí si te atreves" style="margin-top: 10px;">
+            </div>
+
+            <div class="boton-trampa">
+                <button id="btnGuardar" class="btn-guardar-loco" onclick="guardarDatos()">
+                    NO TOCAR (pero toca) 
+                </button>
+                <div class="contador-inverso" id="contadorClick"> 3 intentos restantes </div>
+            </div>
+        </div>
+        <div class="zona-lista">
+            <h2 class="titulo-lista"> REGISTRO DE ALMAS PERDIDAS </h2>
+            <div id="listaDatos" class="lista-caotica">
+                <div class="item-vacio"> No hay datos... ¿te atreves a agregar? </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

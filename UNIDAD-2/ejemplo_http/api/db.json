@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "titulo": "Nuevo Post Creado",
+      "descripcion": "Econtenido ",
+      "fecha": "2025-03-27"
+    },
+    {
+      "titulo": "nuevo post",
+      "descripcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:39:49.781Z",
+      "id": "q6p5UhtoILo"
+    },
+    {
+      "titulo": "nuevo post",
+      "descripcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:39:52.939Z",
+      "id": "G70lQtArkMk"
+    },
+    {
+      "titulo": "nuevo post",
+      "descripcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:50:26.876Z",
+      "id": "p2H90NxS9nE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
