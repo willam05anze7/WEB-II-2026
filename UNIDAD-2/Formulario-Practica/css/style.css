@@ -1,36 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+button#btnX {
+    background-color: red;
+    color: lime;
+    font-weight: bolder;
+    padding: 20px;
+    border-radius: 50%; /* Botón redondo difícil de clicar */
 }
 
-.titulo-loco {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #ff4757;
-    text-shadow: 5px 5px 0px #ffa502;
-    transform: rotate(2deg);
-    animation: temblor 0.5s infinite;
-    margin-bottom: 10px;
+input[type="range"] {
+    cursor: not-allowed; /* Parece que no funciona, pero sí funciona */
+}
+/* 1. Reset de locura: todo lo que sea texto será GIGANTE por defecto */
+body {
+    font-size: 80px; /* Tamaño de un titular de periódico para un texto normal */
+    background-color: #00ff00; /* Verde radioactivo */
+    color: #ff00ff; /* Rosa fuerte (combinación dolorosa) */
 }
 
-@keyframes temblor {
-    0%, 100% { transform: rotate(2deg); }
-    50% { transform: rotate(-1deg); }
+/* 2. Inputs que parecen hormigas (PEQUEÑOS) */
+/* El usuario tendrá que forzar la vista para ver qué escribe */
+input[type="text"], input[type="time"] {
+    width: 50px; 
+    height: 15px;
+    font-size: 8px; /* Casi invisible */
+    border: 1px solid black;
+    background-color: white;
 }
 
-.subtitulo-absurdo {
-    text-align: center;
-    color: #2c3e50;
-    font-style: italic;
-    margin-bottom: 30px;
-    font-size: 0.9rem;
+/* 3. El Slider de Ciudad (GIGANTE) */
+/* Ocupará toda la pantalla y será difícil de mover con precisión */
+#ciudadInput {
+    width: 100%;
+    height: 200px;
+    cursor: crosshair;
 }
 
-.zona-caos {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 40px;
+/* 4. Los Radio Buttons de Hermanos (GIGANTES Y PEQUEÑOS mezclados) */
+/* Usamos selectores de posición para que unos sean grandes y otros no */
+input[type="radio"]:nth-child(even) {
+    transform: scale(5); /* Gigante */
+    margin: 50px;
 }
 
+input[type="radio"]:nth-child(odd) {
+    transform: scale(0.2); /* Minúsculo */
+}
+
+/* 5. Etiquetas de texto (Variedad de tamaños sin sentido) */
+span {
+    font-size: 10px; /* Muy pequeño para instrucciones importantes */
+    display: block;
+}
+
+p {
+    font-size: 120px; /* Exageradamente grande para una simple pregunta */
+    line-height: 0.5; /* Las letras se chocarán entre sí */
+}
+
+/* 6. El botón de enviar (Tamaño mediano pero con fuente de 2px) */
+button#btnX {
+    width: 300px;
+    height: 300px;
+    font-size: 5px; /* Botón grande, letra que no se lee */
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+/* 7. Lista de resultados (Invisible hasta que te acercas) */
+#caosLista li {
+    font-size: 3px; 
+    background: white;
+    margin-bottom: 2px;
+}
