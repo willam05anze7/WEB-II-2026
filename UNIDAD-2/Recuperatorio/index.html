@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="formContainer">
+            <div class="title">
+                <h2>📋 Gestor de Tareas</h2>
+            </div>
+            <!-- IMPORTANTE: El formulario NO debe tener action ni method -->
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Nombre de la tarea" class="inputForm" required>
+                <input type="text" id="taskDescription" placeholder="Descripción" class="inputForm" required>
+                <input type="date" id="taskDate" class="inputForm" required>
+                <select id="taskPriority" class="inputForm" required>
+                    <option value="">Seleccionar prioridad</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <button type="submit" class="btnCreate">
+                    Agregar Tarea <i class="fas fa-plus-circle"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="contentContainer">
+            <div class="tableContainer">
+                <h2>📊 Lista de Tareas</h2>
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Fecha</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cardsContainer">
+                <h2>🎴 Tareas Registradas</h2>
+                <div id="taskCards"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

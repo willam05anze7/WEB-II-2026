@@ -1,0 +1,18 @@
+{
+    "posts": [
+    {
+        "Nombre_tarea": "tarea de Web fortaleciendo el API",
+        "descripcion": "Crear un nuevo post",
+        "fecha": "2025-03-30",
+        "Prioridad": "los estudiantes fortalezen la lectura de la informacion y el desarrollo en la programacion"
+    },
+    {
+        "Nombre_tarea": "Creando un nuevo conexion fortaleciendo el API",
+        "descripcion": "Crear un nuevo conexion",
+        "fecha": "2025-03-31",
+        "Prioridad": "los estudinates aprender a crear una nueva conexion y fortalecer el API"
+    }
+    
+    ],
+    "$schema": "./node_modules/json-server/schema.json"
+}
