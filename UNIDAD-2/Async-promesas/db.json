@@ -3,7 +3,92 @@
     {
       "nombre": "FULANITO",
       "email": "fulanito@univalle.com",
-      "id": 1
+      "id": "1"
+    },
+    {
+      "nombre": "hola mundo2213212",
+      "email": "prueba@est.com",
+      "id": "-rzF8CR18l4"
+    },
+    {
+      "nombre": "hola mundo2213212",
+      "email": "WEB.Prueba@est.com",
+      "id": "rfcu3Ry8ipw"
     }
-  ]
+  ],
+  "productos": [
+    {
+      "nombre": "FULANITO",
+      "precio": "1000",
+      "descripcion": "hola mundo",
+      "id": "1"
+    },
+    {
+      "nombre": "hola mundo2213212",
+      "precio": "2000",
+      "descripcion": "lecho condensada",
+      "id": "2ds2"
+    },
+    {
+      "nombre": "krmo",
+      "precio": "5555",
+      "descripcion": "perfume el mejor ",
+      "id": "csZyCzGFaMI"
+    },
+    {
+      "nombre": "",
+      "precio": "",
+      "descripcion": "",
+      "id": "qE4A-yvY1YY"
+    },
+    {
+      "nombre": "hola",
+      "precio": "233",
+      "descripcion": "objeto de letroro extradamente grande",
+      "id": "XvyBSkC6eak"
+    }
+  ],
+  "pets": [
+    {
+      "nombre": "Firulais",
+      "edad": "2",
+      "raza": "Labrador",
+      "peso": "20",
+      "idDueno": "1",
+      "id": "abc123"
+    },
+    {
+      "nombre": "Luna",
+      "edad": "3",
+      "raza": "Pastor Alemán",
+      "peso": "25",
+      "idDueno": "2",
+      "id": "def456"
+    },
+    {
+      "nombre": "hola",
+      "edad": "23",
+      "raza": "nose",
+      "peso": "23",
+      "idDueno": "1",
+      "id": "b8IzBiud7dE"
+    },
+    {
+      "nombre": "camino",
+      "edad": "23",
+      "raza": "surigan",
+      "peso": "23",
+      "idDueno": "2",
+      "id": "LIVLcg2UHHo"
+    },
+    {
+      "nombre": "chavito",
+      "edad": "12",
+      "raza": "chiwawa",
+      "peso": "3",
+      "idDueno": "1",
+      "id": "eos7QlMIA9E"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

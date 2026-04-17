@@ -65,7 +65,7 @@ listar_clientes()
 //-----------optimizado-----------//
 
 const listar_clientes = () => {
-    fetch("http://localhost:3000/perfil")//hacemos l atepicion con fetch, que devuelve una promesa
+    return fetch("http://localhost:3000/perfil")//hacemos l atepicion con fetch, que devuelve una promesa
     .then((response)=>response.json())//convertimos la respuesta a json
 }
 
@@ -80,17 +80,17 @@ const crear_cliente = (nombre,email)=>{
     });
 
 };
+
 const actualizar_cliente = (nombre,email, id)=>{//solo modifico el nombre y email 
-    return fetch(`http://localhost:3000/perfil/${id}`,
-        {
+    return fetch(`http://localhost:3000/perfil/${id}`, {
         method:"PUT",//metodo put para actualizar un cliente
         headers:{
             "content-type":"application/json"//indicamos que el contenido es json
         },
-        body:JSON.stringify({nombre,email}//realizamos la conversion a json del objeto que queremos enviar
-            .then(respuesta=>console.log(respuesta)).catch((error)=>console.log(error)))
-    
-    });
+        body:JSON.stringify({nombre,email}) //realizamos la conversion a json del objeto que queremos enviar
+    })
+    .then(respuesta => respuesta) // Retornamos la respuesta para seguir la promesa
+    .catch((error) => console.log(error));
 };
 
 const eliminar_cliente = (id)=>{

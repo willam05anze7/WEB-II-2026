@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doguito Petshop | Registro de Mascota</title>
+    <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="../assets/css/register_pet.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+</head> 
+<body>
+    <header class="header container">
+    <img
+        src="../assets/img/doguitoadm.svg"
+        alt="Logo Doguito"
+        class="header_logo"
+    />
+    <nav>
+        <ul class="header__list-nav">
+            <li class="header__link"><a href="lista_preducto.html">Dashboard</a></li>
+            <li class="header__link"><a href="registrar_producto.html">Productos</a></li>
+            <li class="header__link"><a href="lista_cliente.html">Clientes</a></li>
+            <li class="header__link"><a href="lista_pet.html">Pets</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="container flex flex--center flex--column">
+    <section class="card cadastro">
+        <h1 class="card__title">Registrar Mascota</h1>
+        
+        <form action="#" class="flex flex--column" data-form>
+        <div class="input-container">
+            <input
+            name="nombre"
+            id="nombre"
+            class="input"
+            type="text"
+            placeholder=" "
+            data-nombre
+            required
+            />
+            <label class="input-label" for="nombre">Nombre de la mascota</label>
+            <span class="input-menssage-error">El nombre es obligatorio</span>
+        </div>
+
+        <div class="input-container">
+            <input
+            name="edad"
+            id="edad"
+            class="input"
+            type="text"
+            placeholder=" "
+            data-edad
+            required
+            />
+            <label class="input-label" for="edad">Edad (años)</label>
+            <span class="input-menssage-error">Ingrese una edad válida</span>
+        </div>
+
+        <div class="input-container">
+            <input
+            name="raza"
+            id="raza"
+            class="input"
+            type="text"
+            placeholder=" "
+            data-raza
+            required
+            />
+            <label class="input-label" for="raza">Raza</label>
+            <span class="input-menssage-error">La raza es obligatoria</span>
+        </div>
+
+        <div class="input-container">
+            <input
+            name="peso"
+            id="peso"
+            class="input"
+            type="text"
+            placeholder=" "
+            data-peso
+            required
+            />
+            <label class="input-label" for="peso">Peso (kg)</label>
+            <span class="input-menssage-error">Ingrese un peso válido</span>
+        </div>
+
+        <div class="input-container">
+            <input
+            name="dueno"
+            id="dueno"
+            class="input"
+            type="text"
+            placeholder=" "
+            data-dueno
+            required
+            />
+            <label class="input-label" for="dueno">ID del Dueño</label>
+            <span class="input-menssage-error">El ID del dueño es obligatorio</span>
+        </div>
+
+        <button type="submit" class="button">
+            Registrar Mascota
+        </button>
+        </form>
+    </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../controllers/pet_registro.js" type="module"></script>
+</body>
+</html>

@@ -12,37 +12,34 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/base/base.css" />
-    <link rel="stylesheet" href="./assets/css/componentes/header.css" />
-    <link rel="stylesheet" href="./assets/css/componentes/card.css" />
-    <link rel="stylesheet" href="./assets/css/register_client.css" />
-    <link rel="stylesheet" href="./assets/css/componentes/inputs.css" />
-    <link rel="stylesheet" href="./assets/css/componentes/button.css" />
-    <link rel="stylesheet" href="./assets/css/register_product.css" />
+    />  
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="../assets/css/register_product.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
   </head>
   <body>
     <header class="header container">
       <img
-        src="./assets/img/doguitoadm.svg"
+        src="../assets/img/doguitoadm.svg"
         alt="Logo Doguito"
         class="header_logo"
       />
       <nav>
         <ul class="header__list-nav">
-          <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
-          <li class="header__link">
-            <a href="lista_cliente.html">Clientes </a>
-          </li>
-          <li class="header__link"><a href="#">Pets</a></li>
+          <li class="header__link"><a href="lista_preducto.html">Dashboard</a></li>
+          <li class="header__link"><a href="registrar_producto.html">Productos</a></li>
+          <li class="header__link"><a href="lista_cliente.html">Clientes</a></li>
+          <li class="header__link"><a href="lista_pet.html">Pets</a></li>
         </ul>
       </nav>
     </header>
     <main class="container flex flex--center flex--column">
       <section class="card cadastro">
         <h1 class="card__title">Registrar un producto</h1>
-        <form action="#" class="flex flex--column">
+        <form action="#" class="flex flex--column" data-form>
           <div class="input-container">
             <input
               name="nombre"
@@ -50,6 +47,7 @@
               class="input"
               type="text"
               placeholder="nombre"
+              data-nombre
             />
             <label class="input-label" for="nombre">nombre</label>
             <span class="input-menssage-error">Error</span>
@@ -61,6 +59,7 @@
               class="input"
               type="text"
               placeholder="Precio"
+              data-precio
             />
             <label class="input-label" for="precio">Precio</label>
             <span class="input-menssage-error">Error</span>
@@ -76,15 +75,19 @@
               name="description"
               id="description"
               placeholder="Descripcion"
+              data-descripcion
             ></textarea>
             <label class="textarea-label" for="description">Descripcion</label>
             <span class="textarea-menssage-error">Error</span>
           </div>
-          <a href="./registro_completado.html" class="button"
-            >Registrar producto</a
-          >
+          <button type="submit" class="button">
+            Registrar producto
+          </button>
         </form>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../controllers/producto_registro.js" type="module"></script>
   </body>
 </html>
+  
