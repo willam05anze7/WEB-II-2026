@@ -1,5 +1,5 @@
 //-----------optimizado-----------//
-
+/*
 const listar_pets = () => {
     return fetch("http://localhost:3000/pets")
     .then((response)=> {
@@ -59,6 +59,56 @@ const pet = (id)=>{
         return respuesta.json();
     });
 }
+*/
+
+
+
+//---------con MYSQL (XAMPP) - Módulo de Mascotas (Pets)
+const api_pets_url = 'http://localhost/_api/pets_conex.php'
+
+const listar_pets = () => {
+    return fetch(api_pets_url).then(res => {
+        if (!res.ok) throw new Error('Error al listar mascotas');
+        return res.json();
+    });
+}
+
+const crear_pet = (nombre, edad, raza, peso, idDueno, id) => {
+    return fetch(api_pets_url, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ nombre, edad, raza, peso, idDueno, id })
+    }).then(res => {
+        if (!res.ok) throw new Error('Error al crear mascota');
+        return res.json();
+    });
+};
+
+const eliminar_pet = (id) => {
+    return fetch(`${api_pets_url}?id=${id}`, {
+        method: "DELETE",
+    }).then(res => res.json());
+}
+
+const actualizar_pet = (nombre, edad, raza, peso, idDueno, id) => {
+    return fetch(`${api_pets_url}?id=${id}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ nombre, edad, raza, peso, idDueno, id })
+    }).then(res => res.json()).catch(err => console.log(err));
+}
+
+const obtener_pet = (id) => {
+    return fetch(`${api_pets_url}?id=${id}`).then(res => res.json());
+}
+
+
+
+
+
+
+
+
 
 export const petService ={
     listar_pets,

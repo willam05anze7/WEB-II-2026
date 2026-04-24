@@ -62,8 +62,14 @@ listar_clientes()
 */
 
 
-//-----------optimizado-----------//
 
+
+
+
+
+
+//-----------optimizado-----------//
+/*
 const listar_clientes = () => {
     return fetch("http://localhost:3000/perfil")//hacemos l atepicion con fetch, que devuelve una promesa
     .then((response)=>response.json())//convertimos la respuesta a json
@@ -103,12 +109,143 @@ const eliminar_cliente = (id)=>{
 //referencia a ID
 const cliente =(id)=>{
     return fetch(`http://localhost:3000/perfil/${id}`,).then((respuesta)=>respuesta.json());
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//---------con MYSQL
+const api_base_url= 'http://localhost/_api/conexion.php'
+
+const listar_clientes=()=>{
+    return fetch(api_base_url).then(response=>{
+        if(!response.ok)throw new Error('error clientes');
+            return response.json();
+        }
+    )
 }
 
-export const clienteService ={
+const crear_cliente=(nombre, email)=>{
+    return fetch(api_base_url,{
+        method:"POST",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify({nombre,email, id:uuid.v4()})
+    }).then(response=>{
+        if(!response.ok)throw new Error('error al crear cliente');
+        return response.json();
+    })
+};
+
+const eliminar_cliente=(id)=>{
+    return fetch(`${api_base_url}?id=${id}`,{
+        method:"DELETE",
+    })
+}
+
+
+const actualizar_cliente=(nombre,email,id)=>{
+    return fetch(`${api_base_url}?id=${id}`,{
+        method:"PUT",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify({nombre,email, id})
+    }).then(respuesta=>console.log(respuesta)).catch((err)=>console.log(err));
+}
+
+const cliente=(id)=>{
+    return fetch(`${api_base_url}?id=${id}`).then((respuesta)=>respuesta.json());
+    }
+
+*/
+
+
+
+
+
+
+//----TRABAJANDO CON SUPABASE------//
+
+const URL_SUPABASE = 'https://kgrebbbtuwpqwrmrqfus.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_FnNVOoznbEc3wsE7t5WsNA_LExOfLIx';
+
+const tabla = 'clientes';
+const api_URL = `${URL_SUPABASE}/rest/v1/${tabla}`
+
+const HEADERS = {
+    'apikey': SUPABASE_KEY,
+    'authorization': `Bearer ${SUPABASE_KEY}`,
+    'Content-Type': 'application/json',
+    'prefer': 'return=representation'
+};
+
+//respuesta que evita que usemos fetch en cada funcion
+const request = async(url, option = {}) => {
+    const res = await fetch(url, { headers: HEADERS, ...option });
+    const texto = await res.text();
+    const data = texto ? JSON.parse(texto) : null;
+
+    if (!res.ok) {
+        const mensaje = data?.message ?? data?.error ?? texto ?? 'Error';
+        throw new Error(mensaje);
+    }
+    return data;
+};
+
+///--------------------------///
+
+//metodo GET
+const listar_clientes = () => {
+    return request(`${api_URL}?select=id,nombre,email`);
+}
+
+//get por id
+const cliente = (id) => {
+    return request(`${api_URL}?id=eq.${id}&select=id,nombre,email`)
+    .then(data => data?.[0] ?? Promise.reject(new Error('no se puede')));
+}
+
+//metodo post
+const crear_cliente = (nombre, email) => {
+    return request(api_URL, {
+        method: "POST",
+        body: JSON.stringify({ nombre, email })
+    }).then(data => data?.[0]);
+}
+
+//PATCH   
+const actualizar_cliente = (id, nombre, email) => {
+    return request(`${api_URL}?id=eq.${id}`, {
+        method: "PATCH",
+        body: JSON.stringify({ nombre, email })
+    }).then(data => data?.[0] ?? Promise.reject(new Error('no se pudo actualizar')));
+}
+
+//DELETE
+const eliminar_cliente = (id) => {
+    return request(`${api_URL}?id=eq.${id}`, {
+        method: "DELETE",
+    }).then(data => data?.[0] ?? Promise.reject(new Error('no se pudo eliminar')));
+}
+
+export const clienteService = {
     listar_clientes,
     crear_cliente,
     actualizar_cliente,
     eliminar_cliente,
     cliente
 }
+
