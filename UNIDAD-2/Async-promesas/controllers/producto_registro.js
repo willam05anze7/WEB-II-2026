@@ -12,7 +12,7 @@ formulario.addEventListener("submit", (evento)=>{
     productoService.crear_producto(nombre, precio, descripcion)
     .then(respuesta => {
         console.log("todo bien", respuesta);
-        window.location.href = "../screens/registro_completado.html";
+        window.location.href = "../screens/registro_completado_producto.html";
     }).catch((error)=>{
         console.log("todo mal", error);
     });

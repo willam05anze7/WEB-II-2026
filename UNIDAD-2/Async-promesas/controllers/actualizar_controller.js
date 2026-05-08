@@ -33,7 +33,7 @@ formulario.addEventListener("submit", async (evento)=>{
     const email = document.querySelector("[data-email]").value;
     clienteService.actualizar_cliente(nombre,email,id)
     .then(()=>{
-        window.location.href = "../screens/edicion_concluido.html";
+        window.location.href = "../screens/edicion_producto.html";
     })
 })
 

@@ -53,3 +53,4 @@ clienteService.listar_clientes()
             tabla.appendChild(nueva_fila);
         });
     }).catch((error)=>alert("ERROR"));
+

@@ -6,46 +6,45 @@
       "id": "1"
     },
     {
-      "nombre": "hola mundo2213212",
+      "nombre": "hola mundo2213211",
       "email": "prueba@est.com",
       "id": "-rzF8CR18l4"
     },
     {
-      "nombre": "hola mundo2213212",
-      "email": "WEB.Prueba@est.com",
-      "id": "rfcu3Ry8ipw"
+      "nombre": "hola mundo 20",
+      "email": "prueba@est.com",
+      "id": "Gjq9u78snpE"
+    },
+    {
+      "nombre": "hola firulais",
+      "email": "prueba@est.com",
+      "id": "PBoA-QEBwWc"
     }
   ],
   "productos": [
     {
       "nombre": "FULANITO",
-      "precio": "1000",
-      "descripcion": "hola mundo",
+      "precio": "100",
+      "descripcion": "hola mundo 2775",
       "id": "1"
     },
     {
-      "nombre": "hola mundo2213212",
-      "precio": "2000",
-      "descripcion": "lecho condensada",
-      "id": "2ds2"
+      "nombre": "billetera2",
+      "precio": "122",
+      "descripcion": "billetera completaemnte de cuero y resistente ",
+      "id": "P_Yvpol1se8"
     },
     {
-      "nombre": "krmo",
-      "precio": "5555",
-      "descripcion": "perfume el mejor ",
-      "id": "csZyCzGFaMI"
+      "nombre": "billeratera de kromo",
+      "precio": "12321",
+      "descripcion": "billetera muy resistente y muy deradera y cara",
+      "id": "DxNVMCB8_mk"
     },
     {
-      "nombre": "",
-      "precio": "",
-      "descripcion": "",
-      "id": "qE4A-yvY1YY"
-    },
-    {
-      "nombre": "hola",
-      "precio": "233",
-      "descripcion": "objeto de letroro extradamente grande",
-      "id": "XvyBSkC6eak"
+      "nombre": "billeratera de kromo",
+      "precio": "21222",
+      "descripcion": "billera muy cara",
+      "id": "soGA-kPxeKM"
     }
   ],
   "pets": [
@@ -66,14 +65,6 @@
       "id": "def456"
     },
     {
-      "nombre": "hola",
-      "edad": "23",
-      "raza": "nose",
-      "peso": "23",
-      "idDueno": "1",
-      "id": "b8IzBiud7dE"
-    },
-    {
       "nombre": "camino",
       "edad": "23",
       "raza": "surigan",
@@ -88,6 +79,14 @@
       "peso": "3",
       "idDueno": "1",
       "id": "eos7QlMIA9E"
+    },
+    {
+      "nombre": "guiller",
+      "edad": "21",
+      "raza": "kromo",
+      "peso": "34",
+      "idDueno": "4",
+      "id": "DGiToMvaesg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

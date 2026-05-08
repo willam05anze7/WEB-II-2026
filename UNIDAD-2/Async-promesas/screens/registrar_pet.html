@@ -99,18 +99,18 @@
         </div>
 
         <div class="input-container">
-            <input
-            name="dueno"
-            id="dueno"
-            class="input"
-            type="text"
-            placeholder=" "
-            data-dueno
-            required
-            />
-            <label class="input-label" for="dueno">ID del Dueño</label>
-            <span class="input-menssage-error">El ID del dueño es obligatorio</span>
-        </div>
+    <select
+    name="dueno"
+    id="dueno"
+    class="input"
+    data-dueno
+    required
+    >
+        <option value="" disabled selected>Selecciona el dueño</option>
+    </select>
+    <label class="input-label" for="dueno">Dueño</label>
+    <span class="input-menssage-error">Selecciona un dueño</span>
+</div>
 
         <button type="submit" class="button">
             Registrar Mascota
