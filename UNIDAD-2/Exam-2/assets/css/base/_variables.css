@@ -1,0 +1,31 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --font-family-logo: "Pacifico", cursive;
+
+  --font-input: 300;
+
+  --font-size-logo: 28px;
+  --font-size-card-title: 28px;
+  --font-size-input-label: 20px;
+  --font-size-button: 22px;
+  --font-size-form-fieldset: 22px;
+  --font-size-table-header: 22px;
+  --font-size-modal-title: 28px;
+  --font-size-modal-button: 28px;
+
+  --primary-color: #99d129;
+  --secundary-color: #85c0b0;
+  --contrast-dark-color: #4f583c;
+  --contrast-ligth-color: #fff;
+  --info-color: #6a55e6;
+  --sucess-color: #0c0d0c;
+  --transparency-color: #5b4e4e33;
+
+  --shadow: 0 5px 10px #55a6ff38;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --font-size-logo: 56px;
+  }
+}
